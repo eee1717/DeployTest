@@ -74,6 +74,7 @@ public class BbsDAO {
 		 
 	 }
 	
+	 
 	 public ArrayList<Bbs> getList(int pageNumber){
 		 
 		  String SQL = "SELECT * FROM BBS WHERE bbsID < ? AND bbsAvailable = 1 ORDER BY bbsID DESC LIMIT 6"; // 내용을 위에서부터 6깨까지만 불러옴
