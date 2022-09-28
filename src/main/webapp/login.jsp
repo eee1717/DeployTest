@@ -8,11 +8,18 @@
 
 <title> JSP 게시판 로그인페이지</title>
 <%@ include file="nav.jsp" %>
+<style>
+body{  }
+.container{ 
+position:relative;
+border:4px solid gray;
+}
+
+</style>
 </head>
 <body>
 
 <h1>로그인화면</h1>
-
 
 
 <div class="container">
@@ -35,9 +42,10 @@
 			
 			</div>
 		<div class="col-lg-4"></div>
+		<img alt="#" src="./img/doge.jpg">
 	</div>
 </div>
 
-
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </body>
 </html>

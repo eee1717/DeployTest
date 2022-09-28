@@ -10,9 +10,27 @@
 <%@ include file="nav.jsp" %>
 </head>
 
+<style>
+ul{ list-style:none;   padding:0px;}
+li{ list-style:none;   padding:0px;}
+img{ 
+    height: 600px;
+  }
+</style>
 <body>
 
-<h1>메인화면</h1>
+<h1>메인화면입니다</h1>
+
+  <div id="main-container">
+            <!-- banner slider -->
+            <div id="banner-slider"  class="swiper">
+                <ul  class="swiper-wrapper">
+                    <li class="swiper-slide"><a href=#> <img src="./img/doge.jpg"> </a></li>         
+                </ul>
+                
+            </div>
+  </div>
+
 
 
 </body>

@@ -14,10 +14,10 @@ public class BbsDAO {
 	
 	public BbsDAO() {
 		try {
-			String dbURL = "jdbc:mysql://43.200.187.243:3306/bbs";
-			String dbID = "bbs";
-			String dbPassword = "Zhfldk11!";
-			Class.forName("com.mysql.jdbc.Driver");
+			String dbURL = "jdbc:mysql://localhost:3306/bbs?useSSL=false";
+			String dbID = "root";
+			String dbPassword = "1234";
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection(dbURL,dbID,dbPassword);
 			
 		}catch (Exception e) {
