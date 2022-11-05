@@ -5,46 +5,32 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<link rel="stylesheet" href="../css/login.css">
 <title> JSP 게시판 로그인페이지</title>
-<%@ include file="nav.jsp" %>
 <style>
-body{  }
-.container{ 
-position:relative;
-border:4px solid gray;
-}
 
 </style>
+<%@ include file="nav.jsp" %>
 </head>
 <body>
 
-<h1>로그인화면</h1>
+<h1 >로그인화면</h1>
 
 
-<div class="container">
-	<div class="col-lg-4"></div>
-	
-	<div class="col-lg-4">
-			<div class="jumbotron" style="padding-top: 20px;">
-				<form method="post" action="loginAction.jsp">
-				<h3 style="text-align: center;">로그인화면</h3>
-				    
-				<div class="form-group">
-					<input type="text" class="form-control" placeholder="아이디" name="userID" maxlength="20">
-				</div>
-				<div class="form-group">
-					<input type="password" class="form-control" placeholder="비밀번호" name="userPassword" maxlength="20">
-				</div>
-				
-				<input type="submit" class="btn btn-primary form-control" value="로그인">
-				</form>
+<div class="container">		
+ <h1 class="logo">로그인화면</h1>
+	<form method="post" action="loginAction.jsp" >
+       <input type="text" placeholder="ID" id="id" class="account" name="userID" maxlength="20"><br>
+       <input type="password" placeholder="Password" id="password" class="account" name="userPassword" maxlength="20"><br>
+           
+           <div class="d-grid gap-2">
+           <button id="login" class="account" class="btn btn-primary btn-lg" type="submit">로그인</button>
+           <button id="pwfind" class="account" class="btn btn-primary btn-lg" type="button" onclick="location.href='PwFind.jsp'">비밀번호찾기</button>
+	       </div>
+	</form>
+</div>		
 			
-			</div>
-		<div class="col-lg-4"></div>
-		<img alt="#" src="./img/doge.jpg">
-	</div>
-</div>
+		
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </body>

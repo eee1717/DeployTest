@@ -13,13 +13,13 @@
 
 <title> JSP 게시판 로그인페이지</title>
 <!-- 게시판 글제목 색깔 변경 스타일 명렁어 -->
-<style type="text/css">
-a, a:hover {
-      color: black;
-      text-decoration: none;
-} 
-</style>
+
+<link rel="stylesheet" href="../css/BBS.css">
 <%@ include file="nav.jsp" %>
+<style>
+
+
+</style>
 </head>
 <body>
 
@@ -64,32 +64,34 @@ a, a:hover {
         %>
       </tbody>
     </table>
-           <!-- 게시판 페이지  모양부분 -->
+         
+            
+ 			 
+  </div>
+
+</div>
+  <!-- 게시판 페이지  모양부분 -->
+  <div class="test">
            <%
             if(pageNumber !=1)
             {	   
            %>
-            <a href="BBS.jsp?pageNumber=<%=pageNumber -1 %>" class="btn btn-success btn-arraw-left">이전</a>
+            <a href="BBS.jsp?pageNumber=<%=pageNumber -1 %>" class="btn btn-success btn-arraw-left" class="btn6">이전</a>
             
             <%
             } if(bbsDAO.nextPage(pageNumber))
             
             {
             %>
-               <a href="BBS.jsp?pageNumber=<%=pageNumber +1%>" class="btn btn-success btn-arraw-left">다음</a>
+               <a href="BBS.jsp?pageNumber=<%=pageNumber +1%>" class="btn btn-success btn-arraw-right" class="btn6">다음</a>
             <% 
             }
             
             %>
-            
- 			 <a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
-  </div>
 
 
-
+<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
 </div>
-
-
 
 
 

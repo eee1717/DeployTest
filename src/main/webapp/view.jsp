@@ -10,6 +10,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <title> JSP 게시판 로그인페이지</title>
+<style type="text/css">
+.writebtn{ display: flex; justify-content: flex-end; text}
+
+#wbtn2{background: green}
+
+
+</style>
 </head>
 <body>
 
@@ -52,15 +59,15 @@
 %> 
 	
 <ul class="nav navbar-nav navbar-right">	
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-   회원관리
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-		<li><a href="login.jsp">로그인</a></li>
-		<li><a href="Join.jsp">회원가입</a></li>
-  </ul>
-</div>	
+	<div class="dropdown">
+		  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+		   회원관리
+		  </button>
+		  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+				<li><a href="login.jsp">로그인</a></li>
+				<li><a href="Join.jsp">회원가입</a></li>
+		  </ul>
+	</div>	
 </ul>		
 	
 	
@@ -130,16 +137,21 @@
       
       </tbody>
     </table>
-       <a href="BBS.jsp" class="btn btn-primary">목록</a>
-       
+       <div class="writebtn">
+       <a href="BBS.jsp" class="btn btn-primary" id="wbtn1">목록</a>
+      
        <%
        
          if(userID != null && userID.equals(bbs.getUserID())) // userID(로그인상태인지확인하는것) 가 없지않으며 userID가 bbs.getUserID()와 일치한다면 실행시킨다.(본인계정의 아이디로만 수정과 삭제가 작동함) 
          {
         	 
        %> 	 
-         	  <a href="update.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">수정 </a>
-         	  <a  onclick="return confirm('정말로 삭제하시겠습니까?')"  href="deleteAction.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">삭제 </a>
+         	
+         	  <a href="update.jsp?bbsID=<%= bbsID %>" class="btn btn-primary" id="wbtn2">수정 </a>
+         	
+         
+         	  <a  onclick="return confirm('정말로 삭제하시겠습니까?')"  href="deleteAction.jsp?bbsID=<%= bbsID %>" class="btn btn-primary" id="wbtn3">삭제 </a>
+         	  </div>
        <%
          }
        %>
